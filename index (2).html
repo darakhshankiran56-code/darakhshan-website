@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Fiverr Portfolio</title>
+
+
+
+
+
+<style>
+
+/* =========================
+   BASIC CSS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    background-color: #111827;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #9ca3af;
+}
+
+#loginButton {
+    padding: 9px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+#home {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 8%;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-content a {
+    display: inline-block;
+    background-color: #111827;
+    color: white;
+    padding: 12px 25px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.hero-content a:hover {
+    background-color: #374151;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+#about {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+#about h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    margin-top: 40px;
+}
+
+.skills h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.skills ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills li {
+    background-color: #111827;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+#services {
+    padding: 80px 8%;
+    background-color: #eef2f7;
+    text-align: center;
+}
+
+.services-content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+#services h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color: white;
+    width: 240px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 16px;
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+#portfolio {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.portfolio-content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+#portfolio h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.portfolio-card {
+    background-color: white;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card h3 {
+    font-size: 22px;
+    margin: 20px 15px 10px;
+}
+
+.portfolio-card p {
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.portfolio-card a {
+    display: inline-block;
+    background-color: #111827;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.portfolio-card a:hover {
+    background-color: #374151;
+}
+
+
+
+
+
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    padding: 80px 8%;
+    background-color: #eef2f7;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+#contact h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+form button {
+    background-color: #111827;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #374151;
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+#login {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.login-container {
+    max-width: 450px;
+    margin: auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.login-container form {
+    text-align: left;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 13px;
+    background-color: #111827;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-container p {
+    margin-top: 20px;
+}
+
+.login-container a {
+    color: #111827;
+    font-weight: bold;
+}
+
+
+/* =========================
+   SIGN UP
+========================= */
+
+#signup {
+    padding: 80px 8%;
+    background-color: #eef2f7;
+    text-align: center;
+}
+
+.signup-container {
+    max-width: 450px;
+    margin: auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.signup-container form {
+    text-align: left;
+}
+
+.signup-container input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.signup-container button {
+    width: 100%;
+    padding: 13px;
+    background-color: #111827;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   VERIFICATION
+========================= */
+
+#verification {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+}
+
+#verification h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#verification p {
+    margin-bottom: 15px;
+}
+
+#verification input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#verification button {
+    width: 100%;
+    padding: 13px;
+    background-color: #111827;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    #about,
+    #services,
+    #portfolio,
+    #contact,
+    #login,
+    #signup {
+        padding: 60px 5%;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .portfolio-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
+
+
+
+
+
+/* ===== LOGIN / CREATE ACCOUNT ===== */
+
+#authScreen {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffd6e8, transparent 35%),
+        radial-gradient(circle at 80% 80%, #dcd0ff, transparent 35%),
+        linear-gradient(135deg, #fff8fc, #f5f2ff);
+
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+}
+
+
+/* LOGIN CARD */
+
+.auth-card {
+    width: 380px;
+    max-width: 88%;
+    padding: 40px 35px;
+
+    background: rgba(255,255,255,0.94);
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(70,40,90,0.18);
+
+    animation: loginShow 0.7s ease;
+}
+
+
+/* ANIMATION */
+
+@keyframes loginShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* D LOGO */
+
+.brand-icon {
+
+    width: 55px;
+    height: 55px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #ec4899
+    );
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+/* TITLE */
+
+.auth-card h1 {
+
+    margin: 18px 0 8px;
+
+    font-size: 29px;
+
+    background: linear-gradient(
+        90deg,
+        #8b5cf6,
+        #ec4899
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* SUBTITLE */
+
+.subtitle {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* INPUTS */
+
+.auth-card input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    margin: 7px 0;
+
+    border: 1px solid #e4e0e8;
+
+    border-radius: 11px;
+
+    background: #faf9fc;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+.auth-card input:focus {
+
+    border-color: #a855f7;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(168,85,247,0.10);
+}
+
+
+/* FORGOT PASSWORD */
+
+.forgot-password {
+
+    text-align: right;
+
+    margin: 5px 0 12px;
+
+    color: #9b51e0;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.forgot-password:hover {
+
+    text-decoration: underline;
+}
+
+
+/* MAIN BUTTON */
+
+.main-btn {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #ec4899
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.main-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(168,85,247,0.3);
+}
+
+
+/* CREATE ACCOUNT LINK */
+
+.switch-text {
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+.switch-text span {
+
+    color: #9b51e0;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.switch-text span:hover {
+
+    text-decoration: underline;
+}
+
+
+/* CREATE ACCOUNT HIDDEN */
+
+#signupBox {
+
+    display: none;
+}
+
+
+#signupBox h2 {
+
+    margin-bottom: 18px;
+
+    color: #29232f;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .auth-card {
+
+        padding: 32px 24px;
+
+    }
+
+    .auth-card h1 {
+
+        font-size: 24px;
+
+    }
+
+}
+
+
+</style>
+
+
+
+
+
+/* =========================
+   END CSS
+========================= */
+
+
+
+/* LOGIN + CREATE ACCOUNT HORIZONTAL */
+
+#authScreen > div > button {
+    display: inline-block;
+    width: 45%;
+    margin: 8px 1%;
+}
+
+
+/* FORM KO HORIZONTAL LOOK */
+
+#loginBox,
+#signupBox {
+    width: 100%;
+}
+
+
+/* MOBILE PAR WAPAS VERTICAL */
+
+@media (max-width: 500px) {
+
+    #authScreen > div > button {
+        width: 100%;
+        margin: 6px 0;
+    }
+
+}
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+
+
+
+
+
+<div id="authScreen">
+
+    <div class="auth-card">
+
+        <div class="brand-icon">D</div>
+
+        <h1>Welcome Back</h1>
+
+        <p class="subtitle">
+            Login to continue to Darakhshan's Portfolio
+        </p>
+
+
+        <!-- LOGIN -->
+
+        <div id="loginBox">
+
+            <input
+                type="email"
+                id="userEmail"
+                placeholder="Email Address"
+            >
+
+            <input
+                type="password"
+                id="userPassword"
+                placeholder="Password"
+            >
+             
+   <p class="forget-passowrd"
+onclick="forgotpassword()">
+  ForgotPassword/
+</p>
+
+            <button
+                class="main-btn"
+                onclick="loginUser()">
+
+                Login
+
+            </button>
+
+            <p class="switch-text">
+
+                New here?
+
+                <span onclick="showSignup()">
+                    Create an account
+                </span>
+
+            </p>
+
+        </div>
+
+
+        <!-- CREATE ACCOUNT -->
+
+        <div id="signupBox">
+
+            <h2>Create Account</h2>
+
+            <input
+                type="text"
+                id="signupName"
+                placeholder="Full Name"
+            >
+
+            <input
+                type="email"
+                id="newEmail"
+                placeholder="Email Address"
+            >
+
+            <input
+                type="password"
+                id="newPassword"
+                placeholder="Create Password"
+            >
+
+            <button
+                class="main-btn"
+                onclick="createAccount()">
+
+                Create Account
+
+            </button>
+
+            <p class="switch-text">
+
+                Already have an account?
+
+                <span onclick="showLogin()">
+                    Login
+                </span>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<header>
+
+<nav>
+
+<div class="logo">
+DK
+</div>
+
+<ul>
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#portfolio">Portfolio</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+<button id="loginButton">
+🔐 Login
+</button>
+
+</nav>
+
+</header>
+
+
+<section id="home">
+
+<div class="hero-content">
+
+<p>Hello, I'm</p>
+
+<h1>Darakhshan KIRAN</h1>
+
+<h2>Professional Web Developer</h2>
+
+<p>
+I create modern, responsive and professional
+websites for businesses and clients.
+</p>
+
+<a href="#contact">
+Hire Me
+</a>
+
+<a href="#portfolio">
+View My Work
+</a>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<div class="about-content">
+
+<h2>About Me</h2>
+
+<p>
+I am a passionate web developer who creates
+modern and responsive websites.
+</p>
+
+<p>
+I help businesses build professional websites
+that look great on computers and mobile phones.
+</p>
+
+<div class="skills">
+
+<h2>My Skills</h2>
+
+<ul>
+
+<li>HTML</li>
+
+<li>CSS</li>
+
+<li>JavaScript</li>
+
+<li>Responsive Web Design</li>
+
+<li>Website Development</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="services">
+
+<div class="services-content">
+
+<h2>My Services</h2>
+
+<p>
+Here are the services I provide to my clients.
+</p>
+
+<div class="service-container">
+
+<div class="service-card">
+
+<h3>Website Development</h3>
+
+<p>
+I create modern and professional websites
+for businesses and individuals.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>Web Design</h3>
+
+<p>
+I design clean and attractive website layouts
+that are easy to use.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>Responsive Design</h3>
+
+<p>
+I make websites that work properly on
+mobile, tablet and desktop.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>JavaScript Development</h3>
+
+<p>
+I add interactive features and functionality
+to websites using JavaScript.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="portfolio">
+
+<div class="portfolio-content">
+
+<h2>My Portfolio</h2>
+
+<p>
+Here are some of my recent projects.
+</p>
+
+<div class="portfolio-container">
+
+<div class="portfolio-card">
+
+<div class="project-image">
+
+
+
+
+
+<img src="project1.jpg" alt="Business Website">
+
+</div>
+
+<h3>Business Website</h3>
+
+<p>
+A professional website for a business.
+</p>
+
+<a href="#">
+View Project
+</a>
+
+</div>
+
+
+<div class="portfolio-card">
+
+<div class="project-image">
+
+
+
+<img src="project2.jpg" alt="Beauty Website">
+
+</div>
+
+<h3>Beauty Website</h3>
+
+<p>
+A modern beauty and salon website.
+</p>
+
+<a href="#">
+View Project
+</a>
+
+</div>
+
+
+<div class="portfolio-card">
+
+<div class="project-image">
+
+
+
+
+
+
+<img src="project3.jpg" alt="Portfolio Website">
+
+</div>
+
+<h3>Portfolio Website</h3>
+
+<p>
+A professional personal portfolio website.
+</p>
+
+<a href="#">
+View Project
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- =========================
+     CONTACT SECTION
+========================= -->
+
+<section id="contact">
+
+<div class="contact-content">
+
+<h2>Contact Me</h2>
+
+<p>
+Have a project in mind?
+Send me a message.
+</p>
+
+<form id="contactForm">
+
+<label for="name">
+Your Name
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+>
+
+<label for="email">
+Your Email
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email"
+>
+
+<label for="message">
+Your Message
+</label>
+
+<textarea
+id="message"
+placeholder="Write your message"
+></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     LOGIN SECTION
+========================= -->
+
+<section id="login">
+
+<div class="login-container">
+
+<h2>Login</h2>
+
+<form id="loginForm">
+
+<label for="loginEmail">
+Email
+</label>
+
+<input
+type="email"
+id="loginEmail"
+placeholder="Enter your email"
+>
+
+<label for="loginPassword">
+Password
+</label>
+
+<input
+type="password"
+id="loginPassword"
+placeholder="Enter your password"
+>
+
+<button type="submit">
+Login
+</button>
+
+</form>
+
+<p>
+Don't have an account?
+<a href="#signup">
+Create Account
+</a>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SIGN UP SECTION
+========================= -->
+
+<section id="signup">
+
+<div class="signup-container">
+
+<h2>Create Account</h2>
+
+<form id="signupForm">
+
+<label for="signupName">
+Name
+</label>
+
+<input
+type="text"
+id="signupName"
+placeholder="Enter your name"
+>
+
+<label for="signupEmail">
+Email
+</label>
+
+<input
+type="email"
+id="signupEmail"
+placeholder="Enter your email"
+>
+
+<label for="signupPassword">
+Password
+</label>
+
+<input
+type="password"
+id="signupPassword"
+placeholder="Create a password"
+>
+
+<button type="submit">
+Create Account
+</button>
+
+</form>
+
+
+<!-- =========================
+     VERIFICATION
+========================= -->
+
+<div id="verification">
+
+<h3>Email Verification</h3>
+
+<p>
+Enter the verification code sent to your email.
+</p>
+
+<input
+type="text"
+id="verificationCode"
+placeholder="Enter verification code"
+>
+
+<button
+type="button"
+id="verifyButton">
+Verify Email
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+© 2026 Darakhshan Kiran. All Rights Reserved.
+</p>
+
+</footer>
+
+
+
+
+
+<script>
+
+
+// ========================================
+// LESSON 1
+// BUTTON / ALERT
+// ========================================
+
+const hireButton =
+    document.querySelector('a[href="#contact"]');
+
+
+hireButton.addEventListener("click", function() {
+
+    alert("Thank you for visiting my portfolio!");
+
+});
+
+
+
+// ========================================
+// LESSON 2
+// DARK MODE
+// ========================================
+
+const themeButton =
+    document.getElementById("themeButton");
+
+
+if (themeButton) {
+
+    themeButton.addEventListener("click", function() {
+
+        document.body.classList.toggle("dark-mode");
+
+    });
+
+}
+
+
+
+// ========================================
+// LESSON 3
+// PORTFOLIO BUTTONS
+// ========================================
+
+const projectButtons =
+    document.querySelectorAll(".portfolio-card a");
+
+
+projectButtons.forEach(function(button) {
+
+    button.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        alert("Project details will be available soon!");
+
+    });
+
+});
+
+
+
+// ========================================
+// LESSON 4
+// CONTACT FORM
+// ========================================
+
+const contactForm =
+    document.getElementById("contactForm");
+
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById("name").value;
+
+
+        const email =
+            document.getElementById("email").value;
+
+
+        const message =
+            document.getElementById("message").value;
+
+
+        if (
+            name === "" ||
+            email === "" ||
+            message === ""
+        ) {
+
+            alert("Please fill in all fields.");
+
+        }
+
+        else {
+
+            alert(
+                "Thank you! Your message has been submitted."
+            );
+
+        }
+
+    });
+
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+<script type="module">
+
+
+
+
+
+
+window.forgotPassword = async function () {
+
+    const email =
+        document.getElementById("userEmail").value;
+
+    if (!email) {
+        alert("Please enter your email first.");
+        return;
+    }
+
+    try {
+
+        await sendPasswordResetEmail(auth, email);
+
+        alert(
+            "Password reset link has been sent to your email."
+        );
+
+    } catch (error) {
+
+        alert(error.message);
+
+    }
+
+};
+
+
+
+
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    sendEmailVerification,
+    sendPasswordResetEmail;
+    onAuthStateChanged
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+
+const firebaseConfig = {
+
+    apiKey: "AIzaSyDeIl-msmEz4qVckCjbO9CwhPrsz4GQWhw",
+
+    authDomain: "darakhshan-kiran.firebaseapp.com",
+
+    projectId: "darakhshan-kiran",
+
+    storageBucket: "darakhshan-kiran.firebasestorage.app",
+
+    messagingSenderId: "265498273575",
+
+    appId: "1:265498273575:web:95768c284170a9f4cfeb02"
+
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+
+window.showLogin = function() {
+
+    document.getElementById("loginBox").style.display = "block";
+
+    document.getElementById("signupBox").style.display = "none";
+
+};
+
+
+window.showSignup = function() {
+
+    document.getElementById("signupBox").style.display = "block";
+
+    document.getElementById("loginBox").style.display = "none";
+
+};
+
+
+window.createAccount = async function() {
+
+    const email =
+        document.getElementById("newEmail").value;
+
+    const password =
+        document.getElementById("newPassword").value;
+
+
+    try {
+
+        const result =
+            await createUserWithEmailAndPassword(
+                auth,
+                email,
+                password
+            );
+
+        await sendEmailVerification(result.user);
+
+        alert("Account created! Check your email.");
+
+    } catch (error) {
+
+        alert(error.message);
+
+    }
+
+};
+
+
+window.loginUser = async function() {
+
+    const email =
+        document.getElementById("userEmail").value;
+
+    const password =
+        document.getElementById("userPassword").value;
+
+
+    try {
+
+        const result =
+            await signInWithEmailAndPassword(
+                auth,
+                email,
+                password
+            );
+
+
+        if (!result.user.emailVerified) {
+
+            alert("Please verify your email first.");
+
+            return;
+
+        }
+
+
+        document.getElementById("authScreen")
+            .style.display = "none";
+
+    } catch (error) {
+
+        alert("Wrong email or password.");
+
+    }
+
+};
+
+
+onAuthStateChanged(auth, function(user) {
+
+    if (user && user.emailVerified) {
+
+        document.getElementById("authScreen")
+            .style.display = "none";
+
+    }
+
+});
+
+</script>
+
+
+
+
+</body>
+
+</html>
